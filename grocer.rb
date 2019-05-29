@@ -2,7 +2,7 @@ def consolidate_cart(cart)
   cart.each_with_object({}) do |i, col|
     i.each do |type, attributes|
       if col[type]
-        attributes[:count] += 1
+        attributes[:count] = 1
       else
         attributes[:count] = 1
         col[type] = attributes
